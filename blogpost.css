@@ -1,0 +1,188 @@
+body {
+  font-family: 'Sigmar One', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox container for the first section */
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Remove default list styles */
+.flexbox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flexbox li {
+  margin: 10px 0;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* Flexbox container for the second section */
+.flexbox1 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e4e4e4;
+  text-align: justify;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.flexbox1 p {
+  max-width: 800px;
+  margin: 0;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid; /* Activates grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  gap: 10px; /* Adds space between grid items */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Grid items styling */
+.grid-item {
+  background-color: #e4e4e4;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .flexbox {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .flexbox1 {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  /* Grid: Stacking the items vertically */
+  .grid-container {
+    grid-template-columns: 1fr; /* Makes it a single column */
+  }
+
+  .grid-item {
+    padding: 15px;
+  }
+
+  /* Image */
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Reduce font size for smaller screens */
+  .flexbox h1 {
+    font-size: 24px;
+  }
+
+  .flexbox1 p {
+    font-size: 14px;
+  }
+}
+
+/* Tablets and Small Laptops (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .flexbox {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .flexbox1 {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  /* Grid: Two columns on smaller devices */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  }
+
+  .grid-item {
+    padding: 20px;
+  }
+
+  /* Image */
+  .image {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Slightly larger font size */
+  .flexbox h1 {
+    font-size: 28px;
+  }
+
+  .flexbox1 p {
+    font-size: 16px;
+  }
+}
+
+/* Desktop and Larger Screens (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+  .flexbox {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .flexbox1 {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  /* Grid: Three columns on larger screens */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  }
+
+  .grid-item {
+    padding: 20px;
+  }
+
+  /* Image */
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Larger font size for larger screens */
+  .flexbox h1 {
+    font-size: 36px;
+  }
+
+  .flexbox1 p {
+    font-size: 18px;
+  }
+}
